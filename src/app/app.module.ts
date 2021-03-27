@@ -21,6 +21,7 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import * as fromApp from './store/app.reducer';
 import { AuthEffects } from './store/auth-store/auth.effects';
 import { BookingEffects } from './store/booking-store/booking.effects';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { BookingEffects } from './store/booking-store/booking.effects';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatExpansionModule,
     SharedModule,
     SearchModule,
     StoreModule.forRoot(fromApp.appReducer),

@@ -114,7 +114,7 @@ export class AuthService {
 
   deleteBlog(id: any) {
     return this.http
-      .delete(this.urlEndpoint + 'api/admin/delete-blog/' + id)
+      .delete(this.urlEndpoint + 'api/admin/blog/' + id + '/delete')
       .pipe(catchError((errorRes) => throwError(this.getErrorMessage(errorRes))));
   }
 

@@ -23,7 +23,32 @@
     <p class="error-message mt-5 mb-5">{{ errorMessage }}</p>
   </div>
 
-  <mat-grid-list
+  <div class="row">
+    <div class="col-md-4 mb-2" *ngFor="let blog of blogs">
+      <!-- <button
+        *ngIf="user && user.role === 'Admin'"
+        class="btn btn-block btn-outline-danger"
+        (click)="onBlogDelete(blog.id)">
+        Delete Blog
+      </button> -->
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{blog.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{ blog.imageUrl }}" alt="image">
+          <mat-card-content>
+            <div class="clearfix">
+              <p class="float-left">{{blog.summary}}</p>
+              <p class="font-weight-bold float-right">{{ blog.date | date }}</p>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+    </div>
+  </div>
+
+  <!-- <mat-grid-list
     [cols]="breakpoint"
     rowHeight="2:3"
     (window:resize)="onResize($event)"
@@ -51,7 +76,7 @@
         </div>
       </div>
     </mat-grid-tile>
-  </mat-grid-list>
+  </mat-grid-list> -->
 
   <mat-paginator
     (page)="handlePageEvent($event)"
@@ -64,4 +89,3 @@
   </mat-paginator>
 </div>
 
-<br /><br /><br /><br /><br />
