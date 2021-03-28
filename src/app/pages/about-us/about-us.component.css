@@ -64,3 +64,7 @@ section {
   height: 120vh;
 
 }
+
+:host ::ng-deep .about-text mat-expansion-panel {
+  margin-bottom: 1rem;
+}

@@ -217,6 +217,7 @@ input[type=number] {
   .trip-time-duration {
     font-size: 12px;
     align-self: center;
+    padding-left: 0;
   }
   .trip-keyboard-arrow {
     display: none;
@@ -231,9 +232,7 @@ input[type=number] {
     margin-left: -18px;
     /* padding-top: 4px; */
   }
-  .trip-time-duration {
-    padding-left: 0;
-  }
+
   .passenger-vehicle-count-buttons button {
     padding: inherit;
   }
